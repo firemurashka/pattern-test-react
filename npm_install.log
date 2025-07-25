@@ -1,0 +1,66 @@
+npm warn old lockfile
+npm warn old lockfile The package-lock.json file was created with an old version of npm,
+npm warn old lockfile so supplemental metadata must be fetched from the registry.
+npm warn old lockfile
+npm warn old lockfile This is a one-time fix-up, please be patient...
+npm warn old lockfile
+npm warn old lockfile Could not fetch metadata for string-width-cjs@4.2.3 string-width-cjs: No matching version found for string-width-cjs@4.2.3.
+npm warn old lockfile     at module.exports (/root/.nvm/versions/node/v18.20.8/lib/node_modules/npm/node_modules/npm-pick-manifest/lib/index.js:215:23)
+npm warn old lockfile     at RegistryFetcher.manifest (/root/.nvm/versions/node/v18.20.8/lib/node_modules/npm/node_modules/pacote/lib/registry.js:130:54)
+npm warn old lockfile     at async /root/.nvm/versions/node/v18.20.8/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:712:24 {
+npm warn old lockfile   code: 'ETARGET',
+npm warn old lockfile   type: 'version',
+npm warn old lockfile   wanted: '4.2.3',
+npm warn old lockfile   versions: [ '1.0.0', '5.1.1' ],
+npm warn old lockfile   distTags: { latest: '5.1.1' },
+npm warn old lockfile   defaultTag: 'latest'
+npm warn old lockfile }
+npm warn old lockfile Could not fetch metadata for strip-ansi-cjs@6.0.1 strip-ansi-cjs: No matching version found for strip-ansi-cjs@6.0.1.
+npm warn old lockfile     at module.exports (/root/.nvm/versions/node/v18.20.8/lib/node_modules/npm/node_modules/npm-pick-manifest/lib/index.js:215:23)
+npm warn old lockfile     at RegistryFetcher.manifest (/root/.nvm/versions/node/v18.20.8/lib/node_modules/npm/node_modules/pacote/lib/registry.js:130:54)
+npm warn old lockfile     at async /root/.nvm/versions/node/v18.20.8/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:712:24 {
+npm warn old lockfile   code: 'ETARGET',
+npm warn old lockfile   type: 'version',
+npm warn old lockfile   wanted: '6.0.1',
+npm warn old lockfile   versions: [ '1.0.0', '2.0.0', '8.0.0' ],
+npm warn old lockfile   distTags: { latest: '8.0.0' },
+npm warn old lockfile   defaultTag: 'latest'
+npm warn old lockfile }
+npm warn old lockfile Could not fetch metadata for wrap-ansi-cjs@7.0.0 wrap-ansi-cjs: No matching version found for wrap-ansi-cjs@7.0.0.
+npm warn old lockfile     at module.exports (/root/.nvm/versions/node/v18.20.8/lib/node_modules/npm/node_modules/npm-pick-manifest/lib/index.js:215:23)
+npm warn old lockfile     at RegistryFetcher.manifest (/root/.nvm/versions/node/v18.20.8/lib/node_modules/npm/node_modules/pacote/lib/registry.js:130:54)
+npm warn old lockfile     at async /root/.nvm/versions/node/v18.20.8/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:712:24 {
+npm warn old lockfile   code: 'ETARGET',
+npm warn old lockfile   type: 'version',
+npm warn old lockfile   wanted: '7.0.0',
+npm warn old lockfile   versions: [ '1.0.0', '8.0.0' ],
+npm warn old lockfile   distTags: { latest: '8.0.0' },
+npm warn old lockfile   defaultTag: 'latest'
+npm warn old lockfile }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: 'react-router@7.6.3',
+npm warn EBADENGINE   required: { node: '>=20.0.0' },
+npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+npm warn EBADENGINE }
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: 'react-router-dom@7.6.3',
+npm warn EBADENGINE   required: { node: '>=20.0.0' },
+npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+npm warn EBADENGINE }
+
+up to date, audited 1418 packages in 38s
+
+278 packages are looking for funding
+  run `npm fund` for details
+
+9 vulnerabilities (3 moderate, 6 high)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.4.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.4.2
+npm notice To update run: npm install -g npm@11.4.2
+npm notice

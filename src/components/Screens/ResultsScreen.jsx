@@ -1,6 +1,5 @@
 // src/components/Screens/ResultsScreen.jsx
-
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import ResultsHeader from './../Sections/ResultsSections/ResultsHeader';
 import HistogramSection from './../Sections/ResultsSections/HistogramSection';
 import InterpretationSection from './../Sections/ResultsSections/InterpretationSection';
@@ -13,6 +12,7 @@ const ResultsScreen = ({
 	answers,
 	patternResults,
 	categoryResults,
+	categories,
 	onDownloadPDF,
 	topCategory,
 	topPatterns,
@@ -24,16 +24,6 @@ const ResultsScreen = ({
 }) => {
 	const [loading, setLoading] = useState(false);
 	const [showSuccess, setShowSuccess] = useState(false);
-	const [categories, setCategories] = useState([]);
-
-	useEffect(() => {
-		fetch('/data/patterns.json')
-			.then((res) => res.json())
-			.then((data) => {
-				setCategories(Array.isArray(data.categories) ? data.categories : []);
-			})
-			.catch(() => setCategories([]));
-	}, []);
 
 	// Мемоизация, чтобы объект не пересчитывался без нужды
 	const resultsData = useMemo(
@@ -52,7 +42,6 @@ const ResultsScreen = ({
 			setLoading(false);
 		}
 	};
-
 
 	return (
 		<div className="result">
@@ -78,8 +67,6 @@ const ResultsScreen = ({
 				<LiteratureSection />
 			</div>
 			<CategoryResultsSection categories={categories} patternResults={patternResults} />
-
-
 		</div>
 	);
 };

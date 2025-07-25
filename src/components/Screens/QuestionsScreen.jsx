@@ -24,13 +24,28 @@ function shuffleOptionsAndPatterns(options, patterns) {
 }
 
 const QuestionsScreen = ({
-	questionsUrl = '/data/questions.json',
+	questionsUrl = '/pattern/data/questions.json',
 	onComplete,
 	fullName = '',
 	timeDisplay = ''
 }) => {
 	useEffect(() => {
 		console.log("QuestionsScreen mounted");
+	}, []);
+
+
+	useEffect(() => {
+		fetch('/pattern/data/questions.json')
+			.then(r => r.text())
+			.then(txt => {
+				console.log('RAW RESPONSE:', txt);
+				try {
+					const data = JSON.parse(txt);
+					console.log('PARSED JSON:', data);
+				} catch (e) {
+					console.error('JSON PARSE ERROR:', e);
+				}
+			});
 	}, []);
 	// questions: [{ question, options, patterns }]
 	const [questions, setQuestions] = useState([]);

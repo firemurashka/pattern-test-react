@@ -51,7 +51,7 @@ const PatternsIntroSection = () => {
 const PatternItem = ({ icon, title, text }) => (
   <div className="patterns-description__item">
     <div className="patterns-description__block">
-      <img src={`img/test-patterns/${icon}`} alt={title} />
+      <img src={`pattern/img/test-patterns/${icon}`} alt={title} />
       <div className="patterns-description__item-title">{title}</div>
     </div>
     <div className="patterns-description__item-text">{text}</div>

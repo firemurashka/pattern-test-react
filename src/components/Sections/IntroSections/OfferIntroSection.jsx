@@ -39,7 +39,7 @@ const OfferIntroSection = ({ onStart }) => {
 					</div>
 
 					<img className="offer-test__image"
-						src="/img/test-patterns/plane.png"
+						src="pattern/img/test-patterns/plane.png"
 						alt="Плоскости" />
 				</div>
 			</div>

@@ -1,21 +1,24 @@
-//src/App.js
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-import IntroScreen from "./components/Screens/IntroScreen";
-import TestPage from "./pages/TestPage.jsx"; // ваш контейнер для формы, вопросов, результата
-import ResultPage from "./pages/ResultPage.jsx"; // отдельная страница для просмотра результатов по ID
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import PatternTestEntry from "./components/PatternTestEntry";
+import PatternTestResultPage from "./components/PatternTestResultPage";
+import FileManager from "./components/FileManager";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<IntroScreen />} />
-        {/* Весь тест на одной странице-контейнере */}
-        <Route path="/test" element={<TestPage />} />
-        {/* Страница результатов по уникальному ID (например, для Telegram-бота) */}
-        <Route path="/results/:id" element={<ResultPage />} />
-        {/* Перенаправление на главную по неизвестному адресу */}
-        <Route path="*" element={<Navigate to="/" />} />
+        {/* Главная страница теста: интро, форма, вопросы, переход к результату */}
+        <Route path="/pattern-test.html" element={<PatternTestEntry />} />
+
+        {/* Страница просмотра результата по уникальному id */}
+        <Route path="/pattern-test/results/:id" element={<PatternTestResultPage />} />
+
+        {/* (опционально) Служебный менеджер файлов */}
+        <Route path="/files" element={<FileManager />} />
+
+        {/* Любой другой путь ведет на старт теста */}
+        <Route path="*" element={<Navigate to="/pattern-test.html" />} />
       </Routes>
     </Router>
   );
